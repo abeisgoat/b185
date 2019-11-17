@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install
-      run: npm install && npm run build
-    - name: Deploy
-      run: firebase deploy --token $FIREBASE_TOKEN
-    - name: GitHub Action for Firebase
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Install Dependencies
+      run: npm install
+    - name: Build b185...
+      run: npm run build
+    - name: Deploy to Firebase Hosting
       uses: w9jds/firebase-action@v1.0
       with:
         args: deploy --only hosting
