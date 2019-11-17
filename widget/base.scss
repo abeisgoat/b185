@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700&display=swap');
+@import "normalize.css/normalize.css";
+@import "theme";
+
+$spacing: 20px;
+$roundness: 4px;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  display: grid;
+  justify-items: center;
+  background-color: $background;
+}
+
+.walls {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: start;
+  color: rgba(0, 0, 0, 0.8);
+  padding: $spacing $spacing 0px $spacing;
+  width: 520px;
+  justify-content: end;
+}
+
+.wall {
+  width: 460px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: $spacing;
+  padding: 0px $spacing / 1.5;
+  transition: width 0.2s linear;
+  max-height: 100%;
+  overflow: scroll;
+
+  &:not(:last-child) {
+    opacity: 0.5;
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: $roundness;
+  margin: 2px 0px;
+}
+
+.tray {
+  @extend .card;
+  box-shadow: 0px 0px 2px $shadow;
+  display: grid;
+  grid-gap: $spacing / 2;
+  grid-template-rows: 1fr;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  display: block;
+  margin: 0px;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: $spacing $spacing $spacing/1.5 $spacing;
+  background-color: rgba( $background, .6 )
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin: 0px;
+  padding: $spacing / 2 $spacing;
+  line-height: 140%;
+}
+
+input[type=text], input[type=file], textarea {
+  padding: $spacing / 1.4 $spacing / 2 $spacing / 2 $spacing / 2;
+  border-radius: $spacing / 4;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  resize: none;
+  margin: 0px $spacing / 2;
+  &:focus {
+    border-style: solid;
+  }
+}
+
+button {
+  background-color: #ddd;
+  border-radius: $roundness / 2;
+  border: 1px solid #ccc;
+  padding: $spacing $spacing $spacing / 1.3 $spacing;
+  font-family: inherit;
+  pointer-events: auto;
+
+  &:hover {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+}
+
+.tray > button:last-child {
+  border-radius: 0px 0px $roundness $roundness;
+  border-width: 0px;
+  background-color: #ddd;
+  margin: 1px;
+
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.tray > :last-child {
+  margin-bottom: $spacing / 2;
+}
+
+.bar {
+  display: grid;
+  grid-gap: $spacing / 2;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 0px $spacing / 2;
+}
+
+img {
+  border-radius: $roundness;
+  display: block;
+  margin: 0px;
+  padding: 0px $spacing / 2;
+  width: 100%;
+}
