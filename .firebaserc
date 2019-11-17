@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "abe-today",
+    "production": "abe-today"
+  },
+  "targets": {
+    "abe-today": {
+      "hosting": {
+        "demo": [
+          "b185-demo"
+        ]
+      }
+    }
+  }
+}
