@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: GitHub Action for Firebase
-      uses: w9jds/firebase-action@v1.0
-      with: # Set the secret as an input
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     - name: Install
       run: npm install && npm run build
     - name: Deploy
       run: firebase deploy --token $FIREBASE_TOKEN
+    - name: GitHub Action for Firebase
+      uses: w9jds/firebase-action@v1.0
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
