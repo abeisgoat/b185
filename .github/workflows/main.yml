@@ -17,6 +17,7 @@ jobs:
     - name: Deploy to Firebase Hosting
       uses: w9jds/firebase-action@v1.0
       with:
-        args: deploy --only hosting
+        args: deploy --only hosting:demo --project abe-today
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_ID: abe-today 
