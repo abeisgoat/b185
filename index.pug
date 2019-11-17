@@ -2,21 +2,27 @@ doctype
 html
     head
         title b185
-        link(rel="STYLESHEET", type="text/css", href="index.scss")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", type="text/css", href="index.scss")
+        link(rel="stylesheet" , href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        meta(name="viewport", content="width=520, user-scalable=no, initial-scale=1")
+
     body
         .walls
             .wall
                 .tray
-                    h1 This is a second wall
+                    .bar
+                        h1 This is a second wall
                     p It has it's own trays and content
 
             .wall(style="width: 480px;")
                 .tray
-                    h1 Hello, world.
+                    .bar(sided)
+                        h1 Hello, world.
+                        i.material-icons close
                     p Welcome to the b185 widget demo page!
                 .tray
-                    h2 This is a subsection
+                    .bar
+                        h2 This is a subsection
                     p
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                         | This is a bunch of normal text in a paragraph, nothing weird at all
@@ -26,11 +32,12 @@ html
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                     button This is a CTA
                 .tray
-                    h2 Here's some actions
                     .bar
+                        h2 Here's some actions
+                    .bar(padded)
                         button Cancel
                         button Save
-                    .bar
+                    .bar(padded)
                         button Apples
                         button Oranges
                         button Pineapples
@@ -39,12 +46,21 @@ html
                     button Save
 
                 .tray
-                    h2 Write something really long?
+                    .bar
+                        h2 Write something really long?
                     textarea(placeholder="This is a text area")
                     input(type="file")
-                    .bar
+                    .bar(padded)
                         button Cancel
                         button Save
                 .tray
-                    h3 The End
+                    .bar(sided)
+                        h2 San Francisco
+                        i.material-icons directions
+                    img(src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-122.4241,37.78,14.25,0,00/600x600?access_token=pk.eyJ1IjoiYWJlaXNncmVhdCIsImEiOiJrOEhRekZVIn0.9KVGXDIo5bd6pghddAd44Q")
+                    .bar(padded)
+                        button View Menu
+                .tray
+                    .bar
+                        h3 The End
                     img(src="https://jpg.cool/explosion.gif")

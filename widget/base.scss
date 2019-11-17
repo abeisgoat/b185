@@ -34,7 +34,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-gap: $spacing;
-  padding: 0px $spacing / 1.5;
+  padding: 0px $spacing / 1.5 $spacing $spacing / 1.5;
   transition: width 0.2s linear;
   max-height: 100%;
   overflow: scroll;
@@ -69,9 +69,6 @@ h1,h2,h3,h4,h5,h6 {
   display: block;
   margin: 0px;
   font-weight: 300;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: $spacing $spacing $spacing/1.5 $spacing;
-  background-color: rgba( $background, .6 )
 }
 
 h1 {
@@ -138,7 +135,21 @@ button {
   display: grid;
   grid-gap: $spacing / 2;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  padding: 0px $spacing / 2;
+  align-items: center;
+
+  &[padded] {
+    padding: 0px $spacing / 2;
+  }
+
+  &[sided] {
+    grid-template-columns: 1fr fit-content(100%);
+  }
+
+  &:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: $spacing $spacing $spacing/1.5 $spacing;
+    background-color: rgba( $background, .6 )
+  }
 }
 
 img {
@@ -147,4 +158,13 @@ img {
   margin: 0px;
   padding: 0px $spacing / 2;
   width: 100%;
+}
+
+.material-icons {
+  padding: 5px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-radius: 100%;
+  }
 }
