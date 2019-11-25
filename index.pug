@@ -7,13 +7,11 @@ html
         meta(name="viewport", content="user-scalable=no, initial-scale=1")
 
     body
+        a.overlay#menu(href="#")
+            .menu
+                button Home
+                button License
         .walls
-            //.wall
-            //    .tray
-            //        .bar
-            //            h1 This is a second wall
-            //        p It has it's own trays and content
-
             .wall
                 .tray
                     .bar(sided)
@@ -30,6 +28,8 @@ html
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                         | This is a bunch of normal text in a paragraph, nothing weird at all
+                    p
+                        a(href="#menu") Show side menu
                     button This is a CTA
                 .tray
                     .bar(image, style="background-image: url(https://jpg.cool/windmill)")
