@@ -7,6 +7,33 @@ html
         meta(name="viewport", content="user-scalable=no, initial-scale=1")
 
     body
+        a.overlay#long_modal(href="#")
+            .walls
+                .wall
+                    .tray
+                        .bar(image, style="background-image: url(https://jpg.cool/french.fries)")
+                            h2 Here's some french fries
+                        ul
+                            li 👍&nbsp; This is a list item
+                            li 🍍&nbsp; This is a pineapple
+                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+                            li 👍&nbsp; This is a list item
+                            li 🍍&nbsp; This is a pineapple
+                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+                            li 👍&nbsp; This is a list item
+                            li 🍍&nbsp; This is a pineapple
+                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+                        input(type="text", placeholder="This is an input")
+                        button Cancel
+        a.overlay#short_modal(href="#")
+            .walls
+                .wall
+                    .tray
+                        .bar(image, style="background-image: url(https://jpg.cool/forest)")
+                            h2 Here's the forest
+                        p
+                            | There are a lot of trees here in the woods
+                        button Cancel
         a.overlay#menu(href="#")
             .menu
                 button Home
@@ -59,8 +86,10 @@ html
                         i.material-icons directions
                     img(src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-122.4241,37.78,14.25,0,00/600x600?access_token=pk.eyJ1IjoiYWJlaXNncmVhdCIsImEiOiJrOEhRekZVIn0.9KVGXDIo5bd6pghddAd44Q")
                     .bar(padded)
-                        button View Menu
+                        a.button(href="#long_modal") Long Menu
+                        a.button(href="#short_modal") Short Menu
                 .tray
                     .bar
                         h3 The End
                     img(src="https://jpg.cool/explosion.gif")
+                p
