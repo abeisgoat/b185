@@ -4,17 +4,17 @@ html
         title b185
         link(rel="stylesheet", type="text/css", href="index.scss")
         link(rel="stylesheet" , href="https://fonts.googleapis.com/icon?family=Material+Icons")
-        meta(name="viewport", content="width=560, user-scalable=no, initial-scale=1")
+        meta(name="viewport", content="user-scalable=no, initial-scale=1")
 
     body
         .walls
-            .wall
-                .tray
-                    .bar
-                        h1 This is a second wall
-                    p It has it's own trays and content
+            //.wall
+            //    .tray
+            //        .bar
+            //            h1 This is a second wall
+            //        p It has it's own trays and content
 
-            .wall(style="width: 480px;")
+            .wall
                 .tray
                     .bar(sided)
                         h1 Hello, world.
@@ -32,7 +32,7 @@ html
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                     button This is a CTA
                 .tray
-                    .bar
+                    .bar(image, style="background-image: url(https://jpg.cool/windmill)")
                         h2 Here's some actions
                     .bar(padded)
                         button Cancel
@@ -41,7 +41,6 @@ html
                         button Apples
                         button Oranges
                         button Pineapples
-                    img(src="https://jpg.cool/fish.gif")
                     input(type="text", placeholder="This is an input")
                     button Save
 
