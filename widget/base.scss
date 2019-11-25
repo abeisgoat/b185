@@ -192,7 +192,7 @@ button {
 .bar {
   display: grid;
   grid-column-gap: $spacing / 2;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-template-rows: 1fr fit-content(100%);
   align-items: center;
 
