@@ -80,7 +80,7 @@ a {
   margin: 0 auto;
   display: grid;
   grid-gap: $spacing;
-  padding: $spacing ;
+  padding: $spacing / 2;
   transition: width 0.2s linear;
 
   &:not(:last-child) {
