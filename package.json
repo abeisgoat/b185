@@ -12,5 +12,23 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "@percy/agent": "^0.20.2"
+  },
+  "percy": {
+    "version": 1,
+    "snapshot": {
+      "widths": [
+        375,
+        1280
+      ],
+      "min-height": 1024,
+      "percy-css": ".walls { overflow: auto }"
+    },
+    "static-snapshots": {
+      "path": "dist/",
+      "snapshot-files": "**/*.html"
+    }
   }
 }
