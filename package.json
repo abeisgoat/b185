@@ -24,7 +24,7 @@
         1280
       ],
       "min-height": 1024,
-      "percy-css": ".walls { overflow: auto }"
+      "percy-css": "[content] { position: relative };"
     },
     "static-snapshots": {
       "path": "dist/",
