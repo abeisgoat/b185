@@ -66,13 +66,13 @@ a {
 }
 
 .walls {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  //position: absolute;
+  //top: 0px;
+  //left: 0px;
   width: 100%;
   height: 100%;
   z-index: 0;
-  overflow: scroll;
+  //overflow: scroll;
 }
 
 .wall {
@@ -110,11 +110,24 @@ a {
   display: grid;
   grid-gap: $spacing / 2;
   grid-template-rows: 1fr;
+  border: 1px solid white;
 
   > .bar:first-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: $spacing $spacing $spacing/1.5 $spacing;
+    padding: $spacing $spacing $spacing / 1.2 $spacing;
     background-color: rgb($background, 1);
+  }
+
+  &[sticky] {
+    position: sticky;
+    top: -4px;
+    padding: 0px;
+    grid-gap: 0px;
+    z-index: 3;
+    .bar {
+      margin: 0px;
+      border-bottom-width: 0px;
+    }
   }
 }
 
@@ -203,6 +216,12 @@ button, .button {
 
   background-size: cover;
   background-position: center;
+
+  //&[sticky] {
+  //  position: -webkit-sticky; /* Safari */
+  //  position: sticky;
+  //  top: -1px;
+  //}
 
   &[item] {
     border: 1px solid #ddd;

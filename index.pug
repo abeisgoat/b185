@@ -7,46 +7,45 @@ html
         meta(name="viewport", content="user-scalable=no, initial-scale=1")
 
     body
-        a.overlay#long_modal(href="#")
-            .walls
-                .wall
-                    .tray
-                        .bar(image, style="background-image: url(https://jpg.cool/french.fries)")
-                            h2 French Fries
-                        ul
-                            li 👍&nbsp; This is a list item
-                            li 🍍&nbsp; This is a pineapple
-                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
-                            li 👍&nbsp; This is a list item
-                            li 🍍&nbsp; This is a pineapple
-                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
-                            li 👍&nbsp; This is a list item
-                            li 🍍&nbsp; This is a pineapple
-                            li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
-                        input(type="text", placeholder="This is an input")
-                        button Cancel
-        a.overlay#short_modal(href="#")
-            .walls
-                .wall
-                    .tray
-                        .bar(image, style="background-image: url(https://jpg.cool/forest)")
-                            h2 Some Random Forest
-                            .icons
-                                i.material-icons nature
-                        p
-                            | There are a lot of trees here in the woods
-                        button Cancel
-        a.overlay#menu(href="#")
-            .menu
-                button Home
-                button License
+        //a.overlay#long_modal(href="#")
+        //    .walls
+        //        .wall
+        //            .tray
+        //                .bar(image, style="background-image: url(https://jpg.cool/french.fries)")
+        //                    h2 French Fries
+        //                ul
+        //                    li 👍&nbsp; This is a list item
+        //                    li 🍍&nbsp; This is a pineapple
+        //                    li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+        //                    li 👍&nbsp; This is a list item
+        //                    li 🍍&nbsp; This is a pineapple
+        //                    li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+        //                    li 👍&nbsp; This is a list item
+        //                    li 🍍&nbsp; This is a pineapple
+        //                    li 🐒&nbsp; This is a monkey which has longer than anticipated text which might loop
+        //                input(type="text", placeholder="This is an input")
+        //                button Cancel
+        //a.overlay#short_modal(href="#")
+        //    .walls
+        //        .wall
+        //            .tray
+        //                .bar(image, style="background-image: url(https://jpg.cool/forest)")
+        //                    h2 Some Random Forest
+        //                    .icons
+        //                        i.material-icons nature
+        //                p
+        //                    | There are a lot of trees here in the woods
+        //                button Cancel
+        //a.overlay#menu(href="#")
+        //    .menu
+        //        button Home
+        //        button License
         .walls(content)
             .wall
-                .tray
+                .tray(sticky)
                     .bar(sided)
-                        h1 Hello, world.
+                        h1 Widget Demo Page
                         i.material-icons close
-                    p Welcome to the b185 widget demo page!
                 .tray
                     .bar
                         h2 This is a subsection
