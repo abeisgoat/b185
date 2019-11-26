@@ -65,6 +65,15 @@ a {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .wall {
+    padding: 0px !important;
+  }
+  .card {
+    border-radius: 0px !important;
+  }
+}
+
 .walls {
   //position: absolute;
   //top: 0px;
