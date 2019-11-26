@@ -57,8 +57,38 @@ html
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                         | This is a bunch of normal text in a paragraph, nothing weird at all
                         | This is a bunch of normal text in a paragraph, nothing weird at all
+                    .bar(padded)
+                        h2 Here are places to eat
+                    .bundle
+                        .bar(item)
+                            .image(style="background-image: url(https://jpg.cool/bbq)")
+                            .text
+                                h3.title Stubb's BBQ
+                                .subtitle Added 8/10/2012
+                        .bar(item)
+                            .image(style="background-image: url(https://jpg.cool/bouldin.creek.cafe)")
+                            .text
+                                h3.title Bouldin Creek Cafe
+                                .subtitle Added 8/19/2013
+                    hr
+                    .bar(item)
+                        .image(style="background-image: url(https://jpg.cool/bbq)")
+                        .text
+                            h3.title Stubb's BBQ
+                            .subtitle Added 8/10/2012
+                    hr
+                    .bar(item)
+                        .image(style="background-image: url(https://jpg.cool/bouldin.creek.cafe)")
+                        .text
+                            h3.title Bouldin Creek Cafe
+                            .subtitle Added 8/19/2013
+                    .bar(item)
+                        .image(style="background-image: url(https://jpg.cool/bouldin.creek.cafe)")
+                        .text
+                            h3.title Bouldin Creek Cafe
+                            .subtitle Added 8/19/2013
                     p
-                        a(href="#menu") Show side menu
+                        a(href="#menu") Pop out the hamburger menu
                     button This is a CTA
                 .tray
                     .bar(image, style="background-image: url(https://jpg.cool/austin.tx)")
@@ -79,10 +109,10 @@ html
                         h2 Write something really long?
                     textarea(placeholder="This is a text area")
                     input(type="file")
-                    .bar(padded)
+                    .bar(half_padded)
                         button Cancel
                         button Save
-                    .bar(padded)
+                    .bar(half_padded)
                         button Apples
                         button Oranges
                         button Pineapples
@@ -95,7 +125,7 @@ html
                     .bar(image, style="background-image: url(https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-122.4241,37.78,14.25,0,00/600x600?access_token=pk.eyJ1IjoiYWJlaXNncmVhdCIsImEiOiJrOEhRekZVIn0.9KVGXDIo5bd6pghddAd44Q)")
                         .icons
                             i.material-icons cloud_upload
-                    .bar(padded)
+                    .bar(half_padded)
                             a.button(href="#long_modal") Long Menu
                             a.button(href="#short_modal") Short Menu
                 .tray
