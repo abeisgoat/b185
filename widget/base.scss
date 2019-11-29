@@ -1,5 +1,6 @@
 @import "theme";
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 $spacing: 20px;
 $roundness: 4px;
@@ -32,7 +33,7 @@ a {
   overflow: hidden;
   cursor: inherit;
 
-  &:target {
+  &:target, &.visible {
     width: 100%;
     height: 100vh;
   }
@@ -75,9 +76,9 @@ a {
 //}
 
 .walls {
-  //position: absolute;
-  //top: 0px;
-  //left: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -176,6 +177,11 @@ li {
   border-bottom: 1px solid #eee;
   list-style-type: none;
   line-height: 140%;
+
+  &[hoverable]:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+  }
 }
 
 input[type=text], input[type=file], textarea {
@@ -380,4 +386,8 @@ img {
     cursor: pointer;
     border-radius: 100%;
   }
+}
+
+.light {
+  opacity: 0.4;
 }
