@@ -91,11 +91,13 @@ html
                     button This is a CTA
                 .tray
                     .bar(image, style="background-image: url(https://jpg.cool/austin.tx)")
-                        h2 Austin, TX
-                        .icons
+                        h2(bottom_left) Austin, TX
+                        .icons(bottom_right)
                             i.material-icons directions
                             i.material-icons save
                             i.material-icons people
+                        .icons(top_right)
+                            i.material-icons close
                     ul
                         li 👍&nbsp; This is a list item
                         li 🍍&nbsp; This is a pineapple
@@ -106,6 +108,10 @@ html
                 .tray
                     .bar
                         h2 Write something really long?
+                    .bar(tabs)
+                        .tab(selected) Tab A
+                        .tab Tab B
+                        .tab Tab C
                     textarea(placeholder="This is a text area")
                     input(type="file")
                     .bar(half_padded)

@@ -82,7 +82,7 @@ a {
   width: 100%;
   height: 100%;
   z-index: 0;
-  //overflow: scroll;
+  overflow: auto;
 }
 
 .wall {
@@ -233,12 +233,6 @@ button, .button {
   background-size: cover;
   background-position: center;
 
-  //&[sticky] {
-  //  position: -webkit-sticky; /* Safari */
-  //  position: sticky;
-  //  top: -1px;
-  //}
-
   &[item] {
     border: 1px solid #ddd;
     border-width: 1px 0px 1px 0px;
@@ -289,7 +283,30 @@ button, .button {
     background-color: #eee;
     padding: $spacing / 1.5;
     align-items: end;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 100%));
+    grid-template-columns: 1fr fit-content(100%);
+    grid-template-rows: 1fr fit-content(100%);
+    grid-template-areas: "tl tr" "bl br";
+
+    [top_left] {
+      grid-area: tl;
+      align-self: start;
+      justify-self: start;
+    }
+    [top_right] {
+      grid-area: tr;
+      align-self: start;
+      justify-self: end;
+    }
+    [bottom_left] {
+      grid-area: bl;
+      align-self: end;
+      justify-self: start;
+    }
+    [bottom_right] {
+      grid-area: br;
+      align-self: end;
+      justify-self: end;
+    }
 
     &:first-child {
       border-width: 0px;
@@ -350,8 +367,33 @@ button, .button {
     grid-template-columns: 1fr fit-content(100%);
   }
 
+  &[tabs] {
+    border-bottom: 1px solid #ccc;
+    padding: 0px $spacing;
+  }
+
   * {
     grid-row-start: 2;
+  }
+}
+
+.tab {
+  text-align: center;
+  border: 1px solid #ccc;
+  position: relative;
+  top: 1px;
+  padding: $spacing / 2;
+  border-radius: $roundness $roundness 0px 0px;
+  background-color: #eee;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &[selected] {
+    background-color: white;
+    border-bottom-color: white;
   }
 }
 
@@ -390,4 +432,20 @@ img {
 
 .light {
   opacity: 0.4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding: 0px 10px;
+
+  .image {
+    padding: 100% 0px 0px 0px;
+    margin: 0px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
